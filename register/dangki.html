@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/Project JSA/menu.css" />
+    <link rel="stylesheet" href="/Project JSA/login/dangnhap.css" />
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script
+      src="https://kit.fontawesome.com/98638255fc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!------- Menu -------->
+    <div class="menu">
+      <img class="logo" src="/Project JSA/logo.png" alt="" />
+      <div class="contact">
+        <p><i class="fa fa-phone"></i>0856003507</p>
+        <p>
+          <i class="fa fa-signs-post"></i>1600 Pennsylvania Ave NW, Washington,
+          DC 20500, USA
+        </p>
+        <p>
+          <i class="fa fa-facebook-official" aria-hidden="true"></i
+          ><a href="#" style="text-decoration: none; color: white">Danh Thành</a
+          ><br />
+        </p>
+      </div>
+      <div class="navbar">
+        <a href="/Project JSA/index.html">Trang chủ</a>
+        <a href="Món ăn ngày tết.html">Món ăn ngày tết</a>
+        <div class="subnav">
+          <button class="subnavbtn">
+            Trang trí ngày tết <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <div class="subnav-content">
+            <a href="caycanh.html">Cây cảnh, hoa tươi</a>
+            <a href="trangtri.html">Món đồ trang trí</a>
+          </div>
+        </div>
+        <a href="trangphuc.html">Trang phục ngày tết</a>
+        <div style="float: right" class="form">
+          <a href="register/dangki.html" style="float: left">Đăng kí</a
+          ><a href="/Project JSA/login/dangnhap.html" style="float: left">Đăng nhập</a>
+          <a href="cart.html" class="cart-link">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <div id="cartAmount" class="cartAmount">0</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--------->
+    <!-- Form -->
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+      "
+    >
+      <form action="#" class="dk">
+        <fieldset id="dk">
+          <h2>Đăng kí</h2>
+          <label class="lead" for="">Họ và tên</label
+          ><i class="fa-solid fa-star-of-life fa-2xs" style="color: #ff0000"></i
+          ><br />
+          <input
+            class="input"
+            id="name"
+            type="text"
+            placeholder="Tên đầy đủ của bạn"
+          /><br />
+          <label class="lead" for="">Email</label
+          ><i class="fa-solid fa-star-of-life fa-2xs" style="color: #ff0000"></i
+          ><br />
+          <input
+            class="input"
+            id="email"
+            type="email"
+            placeholder="Email của bạn"
+          /><br />
+          <label class="lead" class="pass" for="">Mật khẩu</label
+          ><i class="fa-solid fa-star-of-life fa-2xs" style="color: #ff0000"></i
+          ><br />
+          <input
+            class="input"
+            id="pass"
+            type="password"
+            placeholder="Nhập mật khẩu của bạn"
+          />
+          <button type="button" class="eyes">
+            <i class="fa-solid fa-eye"></i></button
+          ><br />
+          <label class="lead" class="pass" for="">Nhập lại mật khẩu</label
+          ><i class="fa-solid fa-star-of-life fa-2xs" style="color: #ff0000"></i
+          ><br />
+          <input
+            class="input"
+            id="re-pass"
+            type="password"
+            placeholder="Nhập lại mật khẩu của bạn"
+          />
+          <button type="button" class="eyes">
+            <i class="fa-solid fa-eye"></i></button
+          ><br />
+          <label class="lead" for="">Số điện thoại</label>
+          <i class="fa-solid fa-star-of-life fa-2xs" style="color: #ff0000"></i
+            >
+          <input
+          class="input"
+          id="phonenumber"
+          type="text"
+          placeholder="Số điện thoại của bạn"
+        /></i
+          ><br />
+          <div class="btn-tk">
+            <button type="button" id="btn-đk">Đăng kí</button>
+          </div>
+          <div class="dn">
+            <p id="p">
+              (*)Đã có tài khoản?
+              <a class="dangnhap" href="/Project JSA/login/dangnhap.html">Đăng nhập</a>
+            </p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="/Project JSA/register/dangki.js"></script>
+    <script>
+      let basket = JSON.parse(localStorage.getItem("data")) || [];
+      let Calculation = () => {
+        const cartIcon = document.getElementById("cartAmount");
+        let S = 0;
+        for (let i in basket) {
+          S += basket[i].item;
+        }
+        cartIcon.innerHTML = S;
+      };
+      Calculation();
+    </script>
+  </body>
+</html>

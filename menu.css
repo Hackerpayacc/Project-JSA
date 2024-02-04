@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  overflow-x: hidden;
+  background-color: #f0ebeb;
+}
+/* Menu */
+.contact {
+  color: white;
+  float: right;
+  width: 25%;
+}
+.contact p {
+  margin: 8px;
+}
+.menu {
+  background-color: #e94949;
+}
+.logo {
+  height: 30%;
+  width: 25%;
+  background-color: #e94949;
+  color: white;
+  padding-left: 20px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #e94949;
+  position: absolute;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: rgb(250, 77, 46);
+}
+
+.subnav-content {
+  display: none;
+  position: fixed;
+  left: 0;
+  background-color: rgb(224, 72, 72);
+  width: 100%;
+  z-index: 99;
+}
+
+.subnav-content a {
+  color: white;
+  text-decoration: none;
+  z-index: 999;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+.subnav:hover .subnav-content {
+  display: block;
+}
+.cart-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.cartAmount {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  background-color: red;
+  padding: 0px 2px 0px 2px;
+  border-radius: 50px;
+}
+/* Footer */
+.footer {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  margin-top: 20px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 32px 15px 50px 15px;
+}
+.footer-items > i:hover,
+.footer-items > a:hover {
+  color: #eee;
+}
+.footer-items > i {
+  margin-right: 10px;
+  font-size: 30px;
+}
+.footer-items > a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+.footer .footer-items {
+  width: 360px;
+  text-align: left;
+  padding: 14px 0px;
+}
+.footer .footer-items h5 {
+  font-size: 15px;
+}
+.footer .footer-items .content-ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px 0px;
+}
+.footer .footer-items .content-ul .sub-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 37px;
+}
+/*  */

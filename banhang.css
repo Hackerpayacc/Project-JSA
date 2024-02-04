@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* CSS for product */
+/* #Container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+#Container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.single-product {
+  width: 250px;
+  height: 100%;
+  box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.single-product > .pr-content > h5 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.single-product > .pr-content > h6 {
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 5px;
+}
+
+.single-product > img {
+  height: 15em;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.single-product > .pr-content > button {
+  background-color: white;
+  border: none;
+  border: 1px solid black;
+  padding: 5px 0px;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+}
+
+.single-product > .pr-content > button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.single-product > .pr-content > h6 > b {
+  margin-right: 20px;
+}
+
+.buttons {
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+}
+
+.buttons > i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.buttons > div {
+  margin-right: 10px;
+}

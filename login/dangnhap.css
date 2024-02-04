@@ -1,0 +1,79 @@
+body {
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210920/pngtree-chinese-new-year-image_905575.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#dk {
+  background-color: #393b3d80;
+  width: 500px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+}
+#dk > input {
+  padding-left: 40px;
+}
+form {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+#dk h2 {
+  text-align: center;
+  font-weight: bold;
+}
+.lead {
+  font-weight: bold;
+}
+.input {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  text-decoration: underline blue;
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.lead {
+  padding: 10px;
+}
+#btn-đk {
+  background-color: rgb(103, 103, 184);
+  border: none;
+  color: white;
+  height: 40px;
+  width: 200px;
+  border-radius: 100px;
+}
+#p {
+  font-style: italic;
+}
+.btn-tk {
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+}
+#btn-đk:hover {
+  background-color: rgb(81, 81, 151);
+}
+.dn {
+  display: flex;
+  justify-content: center;
+}
+.eyes {
+  border: none;
+  background-color: #393b3d80;
+}
+.pass {
+  -webkit-text-security: circle;
+}
+.dangnhap {
+  color: rgb(78, 203, 241);
+}

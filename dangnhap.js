@@ -1,0 +1,50 @@
+const email = document.querySelector("#email");
+const pass = document.getElementById("pass");
+const btn_login = document.getElementById("btn-đk");
+const acc = JSON.parse(localStorage.getItem("username")) || [];
+//Ham validate form Login
+function validate() {
+  let isVal = true;
+  if (email.value.trim() === "") {
+    alert("Chưa nhập email!!!");
+    return (isVal = false);
+  }
+  if (pass.value.trim() === "") {
+    alert("Chưa nhập password!!!");
+    return (isVal = false);
+  }
+  return (isVal = true);
+}
+
+btn_login.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (validate()) {
+    // Tìm tài khoản đã đăng ký trong đc lưu trong mảng acc
+    let search = null;
+    for (let i = 0; i < acc.length; i++) {
+      const currentUser = acc[i];
+      if (
+        email.value === currentUser.email &&
+        pass.value === currentUser.pass
+      ) {
+        search = currentUser;
+        break;
+      }
+    }
+
+    if (search) {
+      localStorage.setItem("currentUser", JSON.stringify(search));
+      alert("Đăng nhập thành công!!!");
+      window.location.href = "index.html";
+    } else {
+      alert("Sai tài khoản hoặc mật khẩu!!!");
+    }
+  }
+});
+checkLogin();
+function checkLogin() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (currentUser !== null) {
+    window.location.href = "index.html";
+  }
+}
